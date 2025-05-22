@@ -3,38 +3,57 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
     extend: {
       colors: {
-        // Green palette
-        'light-green': '#7CB342',
-        'medium-green': '#2D5E40', 
-        'dark-green': '#1E3A29',
-        
-        // Earth tones
-        'earth-brown': '#8B5A2B',
-        'light-earth': '#D2B48C',
-        
-        // Spiritual/mystical
-        'spiritual-purple': '#614385',
-        'dark-purple': '#42275a',
-        
-        // Neutrals
-        'cream': '#F5F5DC',
-        'light-cream': '#FFFFF0',
-        'dark-cream': '#E8E4C9',
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        tertiary: {
+          DEFAULT: 'hsl(var(--tertiary))',
+          foreground: 'hsl(var(--tertiary-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+      },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
       },
       fontFamily: {
-        'serif': ['Merriweather', 'Georgia', 'serif'],
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
-      },
-      animation: {
-        'leaf-sway': 'sway 3s ease-in-out infinite',
-      },
-      keyframes: {
-        sway: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
-        },
+        sans: ['Open Sans', 'system-ui', 'sans-serif'],
+        serif: ['Alegreya', 'Georgia', 'serif'],
       },
     },
   },
